@@ -1,0 +1,22 @@
+p {
+    font-family: helvetica , sans-serif;
+    font-size: 14px;
+}
+
+h1 {
+    font-family: helvetica,  sans-serif;
+}
+
+/* =====FORM=====*/
+#contact input[type="text"] {
+    width: 60%;
+    border: 1px solid rgb(16, 15, 15);
+    padding: 12px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 8px;
+    resize: vertical;
+
+} 
+
