@@ -28,7 +28,7 @@ body {
     text-align: center;
     color: darkblue;
     font-weight: bold;
-  
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 45px;
 }
 
@@ -44,7 +44,6 @@ table {
 td {
     height: 200px;
     width: 200px;
-    /*Why no Float?? */
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -80,14 +79,12 @@ table tr:nth-child(3) td:nth-child(1) {
 .photo-container {
     height: 200px;
     width: 200px;
-    text-align: center;
-    float: left;
+    text-align: center; 
 }
 
 .O {
     transition: transform .3s;
     opacity: 1;
-    position: absolute;
     background-image: url("../images/avatarO.png");
     width: 200px;
     height: 200px;
@@ -97,7 +94,6 @@ table tr:nth-child(3) td:nth-child(1) {
 .X {
     transition: transform .3s;
     opacity: 1;
-    /* position:absolute omited from video..why? */
     background-image: url("../images/avatarX.png");
     width: 200px;
     height: 200px;
@@ -123,11 +119,10 @@ table tr:nth-child(3) td:nth-child(1) {
     color: white;
     font-weight: bold;
     border: 3px solid black;
-    padding: 24;
+    padding: 2%;
     box-shadow: 5px 5px 25px -4px rgba(0, 0, 0, .65);
     border-radius: 10px;
 }
-
 .displayBox:hover {
     background-color: rgba(53, 35, 142, .88);
 }
@@ -156,7 +151,7 @@ table tr:nth-child(3) td:nth-child(1) {
     border-radius: 10px;
 }
 
-.boxRight>button:hover{
+.boxRight>button:hover {
     background-color: rgba(237, 234, 234, .95);
     border: 1px solid rgba(0, 0, 0, 0.85);
     box-shadow: 3px 3px 15px -4 rgba(0, 0, 0, 0.65);
@@ -206,7 +201,7 @@ table tr:nth-child(3) td:nth-child(1) {
 }
 
 #boardState {
-    display: none;
+    display: block;
     font-size: 10px;
     margin: 10px auto;
     float: left;
@@ -219,16 +214,16 @@ table tr:nth-child(3) td:nth-child(1) {
     font-weight: bold;
     color: #fff;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
-    border: 2px solid rgb(0, 253, 0);
+    border: 2px solid rgb(0, 153, 0);
     background-color: rgb(57, 230, 0);
     margin: 20px 0px 0px 25px;
     padding: 12px 14px 12px 14px;
-    box-shadow: inset 3px 3px 3px 15px -2px rgba(255, 255, 255, 0.95) , 3px 3px 15px -4px rgba(0, 0, 0, .95);
+    box-shadow: inset 3px 3px 15px -2px rgba(255, 255, 255, 0.95) , 3px 3px 15px -4px rgba(0, 0, 0, .85);
     border-radius: 10px;
 }
 
 #btnStart:hover {
-    border: 2px solid rgb(17, 77, 0);
+    border: 2px solid rgb(19, 77, 0);
     background-color: rgb(0, 204, 0);
     box-shadow: inset 3px 3px 15px -2px rgba(0, 0, 0, 0.65);
     transition-property: background box-shadow;
@@ -244,10 +239,10 @@ table tr:nth-child(3) td:nth-child(1) {
     color: #fff;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
     border: 2px solid rgb(204, 0, 0);
-    background-color: rgb(255, 51, 51);
+    background-color: rgb(255, 52, 52);
     margin: 20px 0px 0px 10px;
     padding: 12px 14px 12px 14px;
-    box-shadow:  inset 3px 3px 15px -2px rgba(255, 255, 255, .95) , 3px 3px 15px -4px rgba(0, 0, 0, .9);
+    box-shadow:  inset 3px 3px 15px -2px rgba(255, 255, 255, 0.95) , 3px 3px 15px -4px rgba(0, 0, 0, .85);
     border-radius: 10px;
 }
 
