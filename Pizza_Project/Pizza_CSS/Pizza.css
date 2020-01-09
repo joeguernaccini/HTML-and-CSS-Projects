@@ -1,11 +1,34 @@
+body {
+    background-color: darkgreen;
+    color:white;
+}
+
+h1 {
+    font-family: Candara;
+    color: rgb(213, 78, 54);
+    text-align: center;
+}
+
+h3 {
+    font-family: calibri;
+    color: orange;
+}
+
+div {
+    font-family: helvetica;
+    color: rgb(241, 221, 204);
+}
+
 #menuBG {
     width: 400px;
     height: 470px;
     margin: 10px auto;
+    
+ 
 }
 
 #frmMenu {
-    width: 400px;
+    width: 600px;
     height: 200px;
 }
 
@@ -16,16 +39,29 @@
     float: right;
 }
 
+
+
+
 .left {
     width: 200px;
     height: 200px;
     float: left;
+    
 }
 
 .right {
     width: 200px;
     height: 200px;
     float: right;
+    
+}
+
+.center {
+    width: 200px;
+    height: 200px;
+    float: left;
+    
+
 }
 
 #showText {
@@ -43,7 +79,10 @@
 }
 
 #btnOrder {
+    -webkit-appearance: none;
     margin: 10px 0px 0px 100px;
     width: 100px;
     height: 40px;
+    display: block;
+    justify-content: center;
 }
