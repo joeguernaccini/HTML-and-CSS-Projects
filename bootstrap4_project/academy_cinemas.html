@@ -13,9 +13,10 @@
   <body>
 
     <div class="container">
-    
-        <nav class="navbar navbar-expand-lg navbar-light bg-info">
         
+        <nav class="navbar navbar-expand-lg navbar-light bg-info" data-spy="scroll" data-target="#navbar-example">
+           
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
@@ -89,29 +90,40 @@
                 
                 <div class="card">
                     <img class="card-img-top" src="./img/beautyandthebeast.jpg" alt="Beauty and the Beast">
-                    <div class="card-block">
-                        <h5 class="card-title">Beauty and the Beast</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                        aliqua. Tellus elementum sagittis vitae et. Tellus orci ac auctor augue mauris augue. Augue ut lectus arcu bibendum at
-                        varius vel. Leo a diam sollicitudin tempor id eu nisl nunc. Tortor posuere ac ut consequat semper viverra nam.
-                        Suspendisse interdum consectetur libero id.</p>
+                    <p>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse_1" aria-expanded="false"
+                            aria-controls="collapse_1" style="margin: 5px;">
+                            Ghost in the Shell
+                        </button>
+                    </p>
+                    <div class="collapse" id="collapse_1">
+                        <div class="card card-block">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
+                            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                        </div>
+                        <div class="card-footer">
+                            <span class="badge badge-pill badge-primary">2:30pm</span>
+                            <span class="badge badge-pill badge-primary">5:30pm</span>
+                            <span class="badge badge-pill badge-primary">7:45pm</span>
+                            <span class="badge badge-pill badge-primary">9:10pm</span>
+                            <span class="badge badge-pill badge-primary">11:05pm</span>
+                        </div>
                     </div>
-                    <div class="card-footer">
-                        <span class="badge badge-pill badge-primary">2:30pm</span>
-                        <span class="badge badge-pill badge-primary">5:30pm</span>
-                        <span class="badge badge-pill badge-primary">7:45pm</span>
-                        <span class="badge badge-pill badge-primary">9:10pm</span>
-                        <span class="badge badge-pill badge-primary">11:05pm</span>
                     </div>
-                </div>
+
                 <div class="card">
                     <img class="card-img-top" src="./img/kongskullisland.jpg" alt="Kong Skull Island">
-                    <div class="card-block">
-                        <h5 class="card-title">Kong Skull Island</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                        aliqua. Tellus elementum sagittis vitae et. Tellus orci ac auctor augue mauris augue. Augue ut lectus arcu bibendum at
-                        varius vel. Leo a diam sollicitudin tempor id eu nisl nunc.</p>
-                    </div>
+                    <p>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse_2" aria-expanded="false"
+                            aria-controls="collapse_2" style="margin: 5px;">
+                            Ghost in the Shell
+                        </button>
+                    </p>
+                    <div class="collapse" id="collapse_2">
+                        <div class="card card-block">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
+                            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                        </div>
                     <div class="card-footer">
                         <span class="badge badge-pill badge-primary">2:30pm</span>
                         <span class="badge badge-pill badge-primary">5:30pm</span>
@@ -120,15 +132,22 @@
                         <span class="badge badge-pill badge-primary">11:05pm</span>
                     </div>
                 </div>
+            </div>
+
                 <div class="card">
                     <img class="card-img-top" src="./img/ghostintheshell.jpg" alt="Ghost in the Shell">
-                    <div class="card-block">
-                        <h5 class="card-title">Ghost in the Shell</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                        aliqua. Tellus elementum sagittis vitae et. Tellus orci ac auctor augue mauris augue. Augue ut lectus arcu bibendum at
-                        varius vel. Leo a diam sollicitudin tempor id eu nisl nunc.</p>
-                    </div>
-                    <div class="card-footer">
+                    <p>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse_3"
+                        aria-expanded="false" aria-controls="collapse_3" style="margin: 5px;">
+                        Ghost in the Shell
+                    </button>
+                    </p>
+                    <div class="collapse" id="collapse_3">
+                        <div class="card card-block">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
+                            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                        </div>
+                    <div class="card-footer ">
                         <span class="badge badge-pill badge-primary">2:30pm</span>
                         <span class="badge badge-pill badge-primary">5:30pm</span>
                         <span class="badge badge-pill badge-primary">7:45pm</span>
@@ -153,7 +172,99 @@
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
         </div>
+        
+        <!-- JUMBOTRON HEADING -->
+        <div class="jumbotron jumbotron-fluid bg-info mt-5 text-center">
+            <div class="container">
+                <h1 class="display-4 hidden-sm-dowm" style="color: #fff;font-family: roboto; font-weight: 900; text-transform: uppercase;">Movie Deals</h1>
+                <p class="lead">Check out our monthly deals...</p>
+                <!-- MOVIE DEALS -->
+                <button type="button" data-toggle="modal" class="btn btn-outline-primary" data-target="#register">See our monthly movie deals</button>
 
+            </div>
+        </div>
+
+
+
+        <!-- SIGN-UP FORM-->
+        <div class="row">
+            <div class="container text-center col-md-6" id="deals"> <!-- "col-and-6 is not clear on video (4:24)-->
+                <div class="container text-center">
+                    <h1 class="display-5 my-4 col-lg-auto text-primary">Stay current on movies!</h1>
+                    <div class="input-group mb-5 input-group-sn"><!-- mb-5 & sn not clear on video 4:24-->
+                    <input type="text" class="form-control" placeholder="Email">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-secondary btn-info popover-dismiss" data-container="body" data-toggle="popover" data-placement="top"
+                            data-content="Submit your email to receive great movie deals!">
+                            Sign up
+                        </button>
+                    </span>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+        <!-- FORM MODAL-->
+        <div class="modal fade" id="register">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Register to receive movie deals</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form>
+                            <fieldset class="form-group">
+                                    <label for="firstname">First Name</label>
+                                    <input type="text" class="form-control" id="firstname" placeholder="First Name...">
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <label for="lastname">Last Name</label>
+                                <input type="text" class="form-control" id="lastname" placeholder="Last Name...">
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email...">
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Password...">
+                            </fieldset>
+                        </form>
+                       
+
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END FORM MODAL -->
+
+        <p>
+            
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                Button with data-target
+            </button>
+        </p>
+        <div class="collapse" id="collapseExample">
+            <div class="card card-block">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
+                keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            </div>
+        </div>
+
+
+
+        <!-- FOOTER -->
         <div class="container my-5">
             <ul class="nav nav-inline">
                 <li class="nav-item">
@@ -172,7 +283,7 @@
 
         </div>
 
-
+        
 
 
 
@@ -185,5 +296,31 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</body>>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script>
+       $('.popover-dismiss').popover({
+            trigger: 'focus'
+        })
+    </script>
+
+
+
+
+
+
+
+
+    </body>
 </html>
