@@ -1,37 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Joe Guernaccini</title>
     <link rel="stylesheet" href="./CSS/Guernaccini_Portfolio_Website.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
+
+    <script src="./JS/Guernaccini_Portfolio_Website.js"></script>
+
 </head>
 
-<body class="background">
 
-    
+<!-- Body -->
+<body class="Background">
+    <!-- Fade in effect -->
+
+    <!--This script and function controls our fade in effect -->
+    <script>
+        document.body.className += ' fade-out';
+        $(function() {
+            $('body').removeClass('fade-out');
+        }
+        );
+
+    </script>
+
 <!-- NAV --->
     <div class="Navbar">
         <a class="active" href="#Home">Home</a>
+        <a href="#Slideshow">Slideshow</a>
         <a href="#About">About</a>
         <a href="#GitHub">GitHub</a>
-        <a href="#Contact">Contact</a>
+        <a onclick="openForm()">Contact</a>
     </div>
 
 
+    <div class="btn cancel" onclick="closeForm()">
+
 <!-- HOME -->
+    <div id="Home">
         <br>
         <br>
     
-
 <!-- VIDEO -->
-    <div id="Home">
         <video autoplay muted loop id="Typing_Video"> 
-            <source src="./Videos/video.mp4" type="video/mp4">
+            <source src="./Videos/Typing.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
     </div>
-
 
 <!-- VIDEO TEXT -->
     <div class="Video_Text">
@@ -51,60 +70,120 @@
         </p>
     </div>
 
-<!-- ABOUT -->
+
+
+<!-- Slideshow section -->
+<div id="Slideshow">
+    <div id="Slideshow_Background">
+        <div id="Slideshow_Container">
+
+            <div class="mySlides fade">
+                <div class="Slide_Number">1 / 3</div>
+                <img class="Slide_Show_Images" src="./Images/joe.jpg" style="width:100%">
+                <div class="text">I'm available to assist you on your project!</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="Slide_Number">2 / 3</div>
+                <img class="Slide_Show_Images" src="./Images/HTML_CSS_and_JavaScript.jpeg" style="width:100%">
+                <div class="text">I am a web developer,<br> trained in:<br>HTML, CSS, JavaScript.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="Slide_Number">3 / 3</div>
+                <img class="Slide_Show_Images" src="./Images/Coding_1.jpg" style="width:100%">
+                <div class="text">Contact me now!</div>
+            </div>
+
+           
+
+            <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            
+
+        </div>
+    </div>
+</div>
+
+<!-- We included our JS function within this file to ensure it was given precedence, this function covers the slideshow -->
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+
+  <!-- ABOUT -->
     <div class="Row" id="About">
-        <div class="Column_2">
-            <!-- Left column -->
-            <img src="./Images/joe.jpg" alt="Joe Guernaccini">
+        <div class="Column_2"> <!-- Left column -->
+            <img src="./Images/typing_1.jpg" alt="Joe Guernaccini">
         </div>
     
-        <div class="Column_1">
-            <!-- Right column -->
+        <div class="Column_1"> <!-- Right column -->
             <h1>About</h2>
-                <p>I am a front-end web developer with a team-first mentality! As a father of a competitive gymnast, I enjoy physical
-                activities with my family and outdoor adventures. <br><br>
-                I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The
-                Tech Academy</a>’s Front-End Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS,
-                and JavaScript. <br><br>
-                I would love to work with you on your next project. <a href="#Contact">Contact</a> me below!</p>
+                <p>I am a front-end web developer with a team-first mentality! As a father of a competitive gymnast, I enjoy physical activities with my family and outdoor adventures. <br><br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Front-End Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, and JavaScript. <br><br> I would love to work with you on your next project. <a href="#Contact">Contact</a> me below!</p>
         </div>
     </div>
 
 <!-- GIT HUB -->
     <div class="Row" id="GitHub">
-        <div class="Column_1">
-            <!-- Left column -->
+        <div class="Column_1"> <!-- Left column -->
             <h1>GitHub</h1>
             <p>You can view my coding projects on my GitHub profile here:<br>
-                <center><a href="https://github.com/joeguernaccini?tab=projects" target="_blank">GitHub Projects</a></center>
-            </p>
+                <center><a href="https://github.com/joeguernaccini?tab=projects" target="_blank">GitHub Projects</a></center></p>
         </div>
     
-        <div class="Column_2">
-            <!-- Right column -->
-            <a href="https://github.com/joeguernaccini?tab=projects" target="_blank"><img src="./Images/Github.png"
-                    alt="GitHub"></a>
+        <div class="Column_2"> <!-- Right column -->
+            <a href="https://github.com/joeguernaccini?tab=projects" target="_blank"><img src="./Images/Github.png" alt="GitHub"></a>
         </div>
     </div>
+</div>
 
 <!-- CONTACT -->
-    <div class="Row" id="Contact">
-        <div class="Column_3">
-            <!-- Contact image, left column -->
-            <img src="./Images/contact.jpg" alt="Contact_Image">
-        </div>
-    
-        <div class="Column_1">
-            <!-- Contact form, right "column" -->
-            <h1>Contact</h2>
-                <form action="" method="get">
-                    <label>Name:</label>
-                    <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                    <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                    <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                    <input type="submit" value="Submit">
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button"> CONTACT </button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                <h1>Contact</h1>
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Type your name here" name="name" required>
+                <label for="phone"><b>Phone</b></label>
+                <input type="text" placeholder="Enter your phone number here" name="phone">
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Type your email address here" name="email" required>
+                <label for="message"><b>Message</b></label>
+                <input type="text" placeholder="Type your message here" name="message">
+                
+                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
         </div>
     </div>
@@ -112,21 +191,9 @@
 <!-- FOOTER -->
     <footer>
         <p>
-            <center>&copy 2019, Joe Guernaccini</center>
-            <br>
+            <center>&copy 2019, Joe Guernaccini</center><br>
         </p>
     </footer>
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="XML_Example"></p>
+
+    <script>
+        var XML_Stuff_1, XML_Stuff_2;
+
+        var family = "<family>" +
+            "<father> Joe </father>" +
+            "<wife> Ashly</wife>" + 
+            "<daughter> Fiona </daughter>" +
+            "<dog> Nous> </dog>" +
+            "</family>";
+        
+        XML_Stuff_1 = new DOMParser();
+
+        XML_Stuff_2 = XML_Stuff_1.parseFromString(family, "text/xml");
+
+        document.getElementById("XML_Example").innerHTML = XML_Stuff_2.getElementsByTagName("daughter")[0].childNodes[0].nodeValue;
+
+    
+    </script>
+
+
+    
+</body>
+</html>

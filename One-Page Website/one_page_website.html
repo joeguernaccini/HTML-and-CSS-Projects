@@ -4,13 +4,17 @@
 	<title>Ashly Guernaccini | Attorney</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="./css/one_page_website.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </head>
 
 <body>
+<script>document.body.className += ' fade-out';</script>
+
 	<!-- NAV BAR -->
 	<div>
 		<ul>
-			<a href="#home"><li>HOME</li></a>
+			<a href="#home" title="Go to the Home section"><li>HOME</li></a>
 			<a href="#about"><li>ABOUT</li></a>
 			<a href="#contact"><li>CONTACT</li></a>
 		</ul>
@@ -94,9 +98,9 @@
 
 	<!-- HOME > -->
 	<div id="home">
-		<h1>Ashly Guernaccini, Attorney at Law</h1><br>
+		<h1 >Ashly Guernaccini, Attorney at Law</h1><br>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi quis hendrerit dolor magna eget est lorem ipsum dolor. Sem fringilla ut morbi tincidunt augue.</p><br>
-		<img src="./images/Ashly_Guernaccini_1.jpeg" alt="Ashly Guernaccini">
+		<img class="zoom" src="./images/Ashly_Guernaccini_1.jpeg" alt="Ashly Guernaccini">
 	</div>
 	<!-- END HOME -->
 
@@ -110,14 +114,32 @@
 	</div>
 	<!-- END ABOUT -->
 
+	<!--Slideshow-->
+	<div id="slideshow">
+		<div>
+			<img src="./images/Ashly_Guernaccini_2.jpeg">
+		</div>
+		<div>
+			<img src="./images/Ashly_Guernaccini_1.jpeg">
+		</div>
+		<div>
+			Auto Slideshow
+		</div>
+	</div>
+
+
+
 	<!-- CONTACT -->
 	<div id="contact">
 		<h2>Contact</h2>
-			<form action="" method="post">
-				<input class="contact" type="text" value="First Name">
-				<input class="contact" type="text" value="Last Name">
-				<input class="contact" type="text" value="Email">
-				<input class="contact" type="text" value="Phone Number">
+			<form name="contact_Form" action="" method="post" 
+			onsubmit="return formValidate()">
+				
+				<input name="fname" type="text" value="" placeholder="First Name..."><br>
+				<input name="contact" type="text" value="" placeholder="Last Name..."><br>
+				<input name="contact" type="text" value="" placeholder="Email..."><br>
+				<input name="contact" type="text" value="" placeholder="Phone Number..."><br>
+				<input id="btn" type="submit" value="Contact"><br>
 			</form>
 	</div>
 	<!-- END CONTACT -->
@@ -128,7 +150,65 @@
 			<P>&copy Ashly Guernaccini</P>
 		</footer>
 	</DIV>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<script src="./JS/one_page_website.js"></script>
+	<script>
+		$(function () {
+				$('body').removeClass('fade-out');
+			});
+		
+		
+		
+		$("#slideshow > div:gt(0)").hide();
+
+		setInterval(function () {
+			$('#slideshow > div:first')
+			.fadeOut(1000)
+			.next()
+			.fadeIn(1000)
+			.end()
+			.appendTo('#slideshow');
+		}, 3000	);
+
+	
+
+
+
+
+
+	</script>
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>

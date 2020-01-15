@@ -570,6 +570,31 @@ function checkWinCon8(info,squareArray) {
     winner(winDetected,winCon8); 
 }
 
+//checking for wincon squares 258
+function checkWinCon8(info, squareArray) {
+    var winCon8 = [2, 5, 8];
+    var winDetected = "on";
+    for (var i in info) {
+        if (info[i].charAt(0) == "2") {
+            var match6Avatar = info[i].charAt(1); //only interested in recording the avatar
+        }
+        if (info[i].charAt(0) == "5") {
+            var match7Avatar = info[i].charAt(1);
+        }
+        if (info[i].charAt(0) == "8") {
+            var match8Avatar = info[i].charAt(1);
+        }
+    }
+    if (match2Avatar != undefined && match5Avatar != undefined && match8Avatar != undefined) {
+        if (match2Avatar == match5Avatar && match2Avatar == match8Avatar) {
+            winDetected = "win";
+        }
+    }
+    winner(winDetected, winCon8);
+}
+
+
+
 // (line 573)------------------
 //these block of functions are for each click event of their corresponding square element
 //-----------------------------

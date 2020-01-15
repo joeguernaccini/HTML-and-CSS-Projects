@@ -20,9 +20,30 @@ h1 {
 
 } 
 
+#btn {
+  background-color: tomato;
+  border: .5px solid turquoise;
+  color: white;
+  padding: 15px 32px;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
 body {
   font-family: Verdana, sans-serif;
   margin: 0;
+  opacity: 1;
+  transition: 3s opacity;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
 }
 
 * {
@@ -159,3 +180,60 @@ img.hover-shadow {
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+@keyframes zoom {
+  0%{
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.2,1.2);
+  }
+  100% {
+    transform: scale(1,1,);
+  }
+}
+
+.zoom {
+    animation: zoom 5s forwards;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#slideshow { 
+    margin: 50px auto; 
+    position: relative; 
+    width: 240px; 
+    height: 240px; 
+    padding: 10px; 
+    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
+
+#slideshow > div { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

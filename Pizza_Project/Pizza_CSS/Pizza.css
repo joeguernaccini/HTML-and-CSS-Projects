@@ -1,12 +1,20 @@
 body {
     background-color: darkgreen;
     color:white;
+    opacity: 1;
+    transition: 1s opacity;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
 }
 
 h1 {
     font-family: Candara;
     color: rgb(213, 78, 54);
     text-align: center;
+    font-size: 8vw;
 }
 
 h3 {

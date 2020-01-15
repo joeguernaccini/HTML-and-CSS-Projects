@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/Final_Project.css">
+</head>
+<body>
+    <h2>Popup Form</h2>
+    <p>Click on the button at the bottom of this page to open the login form.</p>
+    <p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>
+
+   
+<button class="open-button" onclick="open()">Open</button>
+
+<div class="firstPopup" id="newForm">
+    <form action="/action_page.php" class="container">
+        <h1>Open Enrollment</h1>
+
+        <label for="name"><b>Name</b></label>
+        <input type="text" placeholder="Enter Your Full Name..." name="name" required>
+
+        <label for="dob"><b>Date of Birth</b></label>
+        <input type="date" placeholder="Enter Your D.O.B..." name="dob" required>
+
+        <button type="submit" class="btn">Sign-up</button>
+        <button type="submit" class="btn cancel" onclick="close()">Close</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+    <script src="./JS/Final_Project.js"></script>
+</body>
+</html>

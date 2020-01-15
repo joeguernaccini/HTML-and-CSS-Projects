@@ -34,3 +34,11 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
     captionText.innerHTML = dots[slideIndex - 1].alt;
 }
+
+function formValidate() {
+    var x = document.form["contact_Form"]["fname"].value;
+    if ( x == "") {
+        alert("Please fill out all sections");
+        return false; 
+    }
+}

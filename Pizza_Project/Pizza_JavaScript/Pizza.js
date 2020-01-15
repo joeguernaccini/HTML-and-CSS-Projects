@@ -76,3 +76,7 @@ function getMeat(runningTotal,text1) {
     document.getElementById("totalPrice").innerHTML= "</h3>Total: <strong>$"
         +runningTotal+".00"+"</strong></h3";
 };
+
+$(function () {
+    $('body').removeClass('fade-out');
+});
